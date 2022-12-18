@@ -31,7 +31,7 @@
       </tr>
     </table>
   </form>
-    {{--
+
   <form action="/edit" method="POST">
     <table>
     @csrf
@@ -40,9 +40,13 @@
         <td><input type="text" name="id" value="{{$form->id}}"></td>
       </tr>
       <tr>
+        <th>task</th>
+        <td><input type="text" name="task" value="{{$form->task}}"></td>
+      </tr>
+      <tr>
         <th></th>
         <td><button>更新</button></td>
       </tr>
     </table>
   </form>
-  --}}
+  

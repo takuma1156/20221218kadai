@@ -13,16 +13,13 @@ class CreateTodosTable extends Migration
      */
     public function up()
     {
-        Schema::create('todos', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table) 
+        {
             $table->id();
-            $table->string('task', 100);
-            $table->timestamps('created_at')->useCurrent()->nullable();
-            $table->timestamps('updated_at')->useCurrent()->nullable();
-
-
+            $table->string('task', 100 );
+            $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
