@@ -30,13 +30,14 @@
         <td><button>送信</button></td>
       </tr>
     </table>
+  </form>
     {{--
   <form action="/edit" method="POST">
     <table>
     @csrf
       <tr>
-        <th>task</th>
-        <td><input type="text" name="task" value="{{$form->task}}"></td>
+        <th>id</th>
+        <td><input type="text" name="id" value="{{$form->id}}"></td>
       </tr>
       <tr>
         <th></th>
