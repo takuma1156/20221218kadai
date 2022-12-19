@@ -9,9 +9,10 @@ use App\Http\Requests\ClientRequest;
 class TodoController extends Controller
 {
     public function index()
-    {
+    {;
         $todos = Todo::all();
-        return view('index',['todos' => $todos]);
+        $form = Todo::find(1);
+        return view('index',['todos' => $todos,'form' => $form]);
     }
 
 
