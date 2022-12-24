@@ -11,7 +11,7 @@ class TodoController extends Controller
     public function index()
     {;
         $todos = Todo::all();
-        $form = Todo::find(1);
+        $form = Todo::find(11);
         return view('index',['todos' => $todos,'form' => $form]);
     }
 
@@ -28,6 +28,12 @@ class TodoController extends Controller
         $form = $request->all();   
         unset($form['_token']);
         Todo::where('id', $request->id)->update($form);
+        return redirect('/');
+    }
+
+    public function delete(ClientRequest $request)
+    {
+        Todo::find($request->id)->delete();
         return redirect('/');
     }
 }
