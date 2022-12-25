@@ -24,7 +24,15 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [
-            'task' => 'required'
+            'task' => 'required|max:20'
+        ];
+    }
+
+    public function messages()
+    {
+        return[
+            'task.required' => '・タスク名を入力してください',
+            'task.max' => '・タスク名は20文字以内で入力してください'
         ];
     }
 }
