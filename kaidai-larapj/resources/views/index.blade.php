@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/public/css/reset.css">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>COACHTECH</title>
 </head>
 <body>
@@ -30,19 +30,20 @@
           </tr>
           @foreach ($todos as $todo)
           <tr>
-          </tr>
             <form action="{{ route('Todo.update', ['id' => $todo ->id]) }} "method="post">
               @csrf
               <td>
                 {{$todo ->created_at}}
-                <input type="text" class="input-update" value="{{$todo->task}}" name="id" />
+              </td>
+              <td>
+                <input type="text" class="input-update" value="{{$todo->task}}" name="task" />
               </td>
               <td>
                 <button class="button-update">更新</button>
               </td>
             </form>
             <td>
-              <form action="/delete" method="post">
+              <form action="{{ route('Todo.delete', ['id' => $todo ->id]) }} " method="post">
                 @csrf
                 <button class="button-delete">削除</button>
               </form>
