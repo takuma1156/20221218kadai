@@ -16,7 +16,10 @@
 -  フレームワーク：Laravel  8.83.26
 
 ##テーブル設計
+![スクリーンショット 2022-12-25 113525](https://user-images.githubusercontent.com/115600326/209455418-5928ba01-8ab8-4b41-ac9d-c5cf6950e5ae.png)
 
 
 ##ER図
+
+
    ![pasted image 0](https://user-images.githubusercontent.com/115600326/205175040-f4830cbb-aef7-465f-b740-e83903554827.png)
